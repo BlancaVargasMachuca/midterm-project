@@ -1,6 +1,7 @@
 package com.ironhack.m_projects.service.interfaces;
 
 import com.ironhack.m_projects.model.account.Account;
+import com.ironhack.m_projects.model.account.CheckingAccount;
 
 
 import java.math.BigDecimal;
@@ -27,4 +28,6 @@ public interface AccountService {
     void applyMonthlyMaintenanceFee(List<Account> accountList);
 
     void updateStatus(String accountNumber);
+
+    List<CheckingAccount> findAllCheckingAccount();
 }
