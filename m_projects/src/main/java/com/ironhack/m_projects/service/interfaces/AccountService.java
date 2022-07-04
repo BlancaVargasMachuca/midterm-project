@@ -1,16 +1,16 @@
 package com.ironhack.m_projects.service.interfaces;
 
 import com.ironhack.m_projects.model.account.Account;
-import com.ironhack.m_projects.security.CustomUserDetails;
+
 
 import java.math.BigDecimal;
 import java.util.List;
 
 public interface AccountService {
 
-    List<Account> findAllAccounts(CustomUserDetails customUserDetails);
+    List<Account> findAllAccounts();
 
-    String getAccountBalance(String accountNumber, CustomUserDetails customUserDetails);
+    String getAccountBalance(String accountNumber);
 
     Account createCheckingAccount(String entityNumber, String branchNumber, BigDecimal amount, Long primaryOwnerId, Long secondaryOwnerId, String secretKey);
 
